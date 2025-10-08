@@ -1,0 +1,101 @@
+:root {
+    --color1: hsl(47, 88%, 63%);
+    --color2: hsl(0, 0%, 100%);
+    --color3: hsl(0, 0%, 42%);
+    --color4: hsl(0, 0%, 7%);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--color2);
+    border-radius: 1.3em;
+    align-items: center;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    max-width: 26em;
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid black;
+    box-shadow: 0.5em 0.5em 0em black;
+    margin-right: 1.5em;
+    flex-wrap: wrap;
+}
+
+.card img:not(.avatar) {
+    width: 100%;
+    border-radius: 0.8em;
+    margin-bottom: 1rem;    
+}
+
+.card-content p:first-child {
+    display: inline-block;
+    background-color: var(--color1);
+    max-width: 6.7em;
+    max-height: 3em;
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    font-weight: 800;
+    margin: 0 0 0.5em 0;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.date {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
+
+h1 {
+    color: var(--color4);
+    font-weight: 800;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+    white-space: normal;
+    margin-bottom: 0.7em;
+}
+
+.card-content {
+    align-content: flex-start;
+    padding: 0;
+}
+
+.desc {
+    color: var(--color3);
+    line-height: 1.6em;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: 1.5em;
+}
+
+.avatar {
+    max-width: 2.5em;
+    margin-bottom: 0;
+}
+
+.author {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: 800;
+    color: var(--color4);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+;
+}
+
+h1:hover {
+    color: var(--color1);
+    cursor: pointer;
+}
